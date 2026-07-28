@@ -1,0 +1,32 @@
+{
+  "name": "lantern-archive",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "worker:dev": "wrangler dev --config worker/wrangler.toml",
+    "worker:deploy": "wrangler deploy --config worker/wrangler.toml",
+    "db:migrate:local": "wrangler d1 migrations apply lantern-archive-db --local --config worker/wrangler.toml",
+    "db:migrate:remote": "wrangler d1 migrations apply lantern-archive-db --remote --config worker/wrangler.toml"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^6.0.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-router-dom": "^7.9.6",
+    "bcryptjs": "^3.0.2"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260726.0",
+    "@tailwindcss/vite": "^4.3.0",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "tailwindcss": "^4.3.0",
+    "typescript": "~5.9.3",
+    "vite": "^8.1.0",
+    "wrangler": "^4.28.1"
+  }
+}
