@@ -1,0 +1,16 @@
+name = "lantern-archive-api"
+main = "src/index.ts"
+compatibility_date = "2026-07-27"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+APP_ORIGIN = "http://localhost:5173"
+PAID_INFO_URL = "https://tccrpg.com/for-schools"
+ANTHROPIC_MODEL = "claude-sonnet-4-20250514"
+COOKIE_DOMAIN = ""
+
+[[d1_databases]]
+binding = "DB"
+database_name = "lantern-archive-db"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+migrations_dir = "migrations"
